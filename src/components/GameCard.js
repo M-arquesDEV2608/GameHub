@@ -1,39 +1,61 @@
-//=========================================
-//Etapa 4 - Criar componentes
-//=========================================
-//nós vamos reutilizar os componentes em 3 telas diferentes 
+import { View, Text, Image, Pressable, StyleSheet } from "react-native"
 
-import {view, text, Imagemage, Pressable, StyleSheet} from "react-native";
+// Navegção programatica
+import { useRouter } from "expo-router"
 
-import { useRouter } from "expo-rauter";
+import { cores } from "../data/tema"
 
-//navegação programatica
+export default function Gamecard ({jogo}){
+    const router = useRouter();
 
-import { cores } from "../data/tema";
-
-export default function GameCard ({jogo}){
-
-    const router =useRouter();
-
-    return (
+    return(<>
         <Pressable
-        style={style.card}
-        onPress={() => router.push(`/jogos/${jogo.id}`)}
+            style={styles.card}
+            onPress={() => router.push(`/jogos/${jogo.id}`)} 
         >
-            <image source={jogo.imagem} style={style.image}/>
-            <view style={style.info}>
-                <text style={styles.nome} numberOfLines={1}>
-
+            <Image source={jogo.imagem} style={styles.imagem}/>
+            <View style={styles.info}>
+                <Text style={styles.nome} numberOfLines={1}>
                     {jogo.nome}
-                </text>
-                <text style={styles.genero}>{jogo.genero}</text>
-                <text style={styles.nota}>⭐{jogo.genero}</text>
-
-            </view>
+                </Text>
+                <Text style={styles.genero}>{jogo.genero}</Text>
+                <Text style={styles.nota}>⭐ {jogo.nota}</Text>
+            </View>
         </Pressable>
-    )
+    </>)
 }
-const styles = StyleSheet.create({
 
-    
-})
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: cores.fundoCard,
+    borderRadius: 12,
+    overflow: "hidden",
+    width: 158,
+    marginRight: 12,
+    borderWidth: 1,
+    borderColor: cores.borda,
+  },
+  imagem: {
+    width:"100%",
+    height: 110,
+  },
+  info: {
+    padding: 10,
+  },
+  nome: {
+    color: cores.textoPrincipal,
+    fontSize: 14,
+    fonrWeight: "Bold",
+  },
+  genero: {
+    color: cores.textoSecundario,
+    fontSize: 12,
+    marginTop: 2,
+  },
+  nota: {
+    color: cores.verde,
+    fontSize: 12,
+    marginTop: 4,
+    fontWeight: "600",
+  }
+});

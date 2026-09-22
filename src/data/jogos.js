@@ -32,12 +32,12 @@ export const jogos = [
 
     {
         id: "3",
-        nome: "EA Sports FC",
-        genero:"Esportes",
-        nota: 4.3,
+        nome: "Bendy and the Ink Machine",
+        genero: "Terror / Survivor Horror",
+        nota: 4.5,
         plataforma: "PC, Console, Mobile",
-        Descrição: "Um mundo de Simulador de futebol mais famoso do mundo",
-        imagem: require("../../assets/games/ea-sports-fc.jpg"),
+        Descricao: "Terror em um estúdio de animação dos anos 30 domado por monstros de tinta.",
+        imagem: require("../../assets/games/bendyandtheinkmachine.jpg"),
         destaque:true,
     },
 
@@ -60,12 +60,12 @@ export const jogos = [
 
     {
         id: "5",
-        nome: "Rocket League",
-        genero:"Esportes",
+        nome: "Cyberpunk 2077",
+        genero: "RPG de Ação",
         nota: 4.4,
-        plataforma: "PC, Console, Mobile",
-        Descrição: "Futebol com carros ",
-        imagem: require("../../assets/games/rocket-league.jpg"),
+        plataforma: "PC, Console",
+        Descricao: "Mercenário com um chip na cabeça lutando para sobreviver em uma cidade futurista.",
+        imagem: require("../../assets/games/cyberpunk2077.jpg"),
         destaque:true,
     },
 
@@ -74,13 +74,13 @@ export const jogos = [
 
     {
         id: "6",
-        nome: "Valorant",
-        genero:"FPS",
-        nota: 4.7,
-        plataforma: "PC, Console, Mobile",
-        Descrição: "é um jogo de tiro tático em equipe ",
-        imagem: require("../../assets/games/valorant.jpg"),
-        destaque:false,
+        nome: "Overwatch",
+        genero: "Hero Shooter",
+        nota: 4.0,
+        plataforma: "PC, Console",
+        Descricao: "Batalhas futuristas em equipe com heróis de habilidades únicas.",
+        imagem: require("../../assets/games/overwatch.jpg"),
+        destaque:true,
     },
 
 
@@ -88,12 +88,12 @@ export const jogos = [
 
     {
         id: "7",
-        nome: "The sims",
-        genero:"Simulação",
-        nota: 4.2,
-        plataforma: "PC, Console, Mobile",
-        Descrição: "Simulador de vida real",
-        imagem: require("../../assets/games/the-sims.jpg"),
+        nome: "Lies of P",
+        genero: "Soulslike / RPG de Ação",
+        nota: 4.7,
+        plataforma: "PC, Console",
+        descricao: "Pinóquio sombrio enfrentando robôs assassinos e escolhendo se vai mentir.",
+        imagem: require("../../assets/games/liesofp.jpg"),
         destaque:false,
     },
 
